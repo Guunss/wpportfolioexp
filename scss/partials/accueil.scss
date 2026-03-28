@@ -1,0 +1,77 @@
+@use './variables.scss';
+
+#accueil {
+
+    background-color: rgba($color: #FFFFFF, $alpha: 0.8);
+    margin: 0 2vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    height: 86vh;
+    margin-top: 14vh;
+
+    .accueil-texte {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro {
+        color: variables.$color-bleugris-texte;
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 48px;
+        color: variables.$color-turquoise-1;
+        margin: 0px;
+    }
+
+    h2 {
+        font-size: 26px;
+        color: variables.$color-turquoise-fonce;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        color: variables.$color-gris-1;
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+
+    .accueil-boutons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+    .btn-primary {
+        background: variables.$color-turquoise-1;
+        color: white;
+    }
+
+    .btn-secondary {
+        background: variables.$color-rouge-1;
+        color: white;
+    }
+
+    .accueil-image img {
+        max-width: 400px;
+        width: 100%;
+    }
+}
+

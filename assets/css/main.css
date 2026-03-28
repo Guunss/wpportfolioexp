@@ -1,0 +1,518 @@
+@charset "UTF-8";
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.background img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: white;
+  margin: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 97vw;
+  z-index: 999;
+}
+header .custom-logo {
+  width: auto;
+  height: 5vh;
+}
+header nav .menu-menu_principal-container ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav .menu-menu_principal-container ul li {
+  list-style: none;
+}
+header nav .menu-menu_principal-container ul li a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #2F3E46;
+  font-size: 20px;
+  padding: 10px;
+}
+header nav .menu-menu_principal-container ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #2CA6A4;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+header nav .menu-menu_principal-container ul li a:hover::after {
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+header .social-media-icon img {
+  max-height: 40px;
+  padding-left: 10px;
+}
+
+/* nunito-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/nunito-v32-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-200italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/nunito-v32-latin-200italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/nunito-v32-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/nunito-v32-latin-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nunito-v32-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/nunito-v32-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/nunito-v32-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/nunito-v32-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/nunito-v32-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/nunito-v32-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/nunito-v32-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/nunito-v32-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/nunito-v32-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-800italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../fonts/nunito-v32-latin-800italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/nunito-v32-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-900italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/nunito-v32-latin-900italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+#accueil {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 2vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  height: 86vh;
+  margin-top: 14vh;
+}
+#accueil .accueil-texte {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+#accueil .intro {
+  color: #2F3E46;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+#accueil h1 {
+  font-size: 48px;
+  color: #2CA6A4;
+  margin: 0px;
+}
+#accueil h2 {
+  font-size: 26px;
+  color: #248C8A;
+  margin-bottom: 15px;
+}
+#accueil .description {
+  color: #6C7A89;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+#accueil .accueil-boutons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+#accueil .btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+#accueil .btn:hover {
+  transform: scale(1.07);
+}
+#accueil .btn-primary {
+  background: #2CA6A4;
+  color: white;
+}
+#accueil .btn-secondary {
+  background: #D94B48;
+  color: white;
+}
+#accueil .accueil-image img {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* SECTION PROJETS */
+#projets {
+  background-color: rgba(44, 166, 164, 0.2);
+  margin: 0 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  padding-bottom: 70px;
+  height: 86vh;
+}
+#projets a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* TITRE */
+.projets-titre {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #D94B48;
+}
+
+/* WRAPPER SWIPER */
+.swiper-container-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* SWIPER */
+.swiper {
+  width: 100%;
+}
+
+/* IMPORTANT SWIPER */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* CARD PROJET */
+.projet {
+  width: 100%;
+  border: 1px solid #D94B48;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* LAYOUT IMAGE + TEXTE */
+.projets-image {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* IMAGE */
+.projets-image img {
+  width: 35%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  align-self: center; /* ✅ centre verticalement l’image */
+}
+
+/* TEXTE */
+.projets-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projets-content h3 {
+  text-align: center;
+  font-size: 32px;
+  color: #248C8A;
+  margin-bottom: 15px;
+}
+
+.projets-content p {
+  color: #6C7A89;
+  line-height: 1.6;
+}
+
+/* FLÈCHES SWIPER */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #D94B48 !important;
+}
+
+/* Décalage visuel à l’extérieur */
+.swiper-button-prev {
+  left: 0;
+  transform: translate(-120%, -50%);
+}
+
+.swiper-button-next {
+  right: 0;
+  transform: translate(120%, -50%);
+}
+
+#competences {
+  background-color: rgba(245, 247, 250, 0.85);
+  margin: 0 2vh;
+  padding-top: 1vh;
+  text-align: center;
+  height: 86vh;
+}
+#competences .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#competences .competences-titre {
+  font-size: 36px;
+  color: #D94B48;
+  margin-bottom: 30px;
+}
+#competences .competences-sous-titre {
+  font-size: 24px;
+  color: #2CA6A4;
+  margin: 50px 0 40px;
+}
+#competences .competences-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#competences .competence-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  transition: transform 0.3s ease;
+}
+#competences .competence-card:hover {
+  transform: translateY(-5px);
+}
+#competences .competence-card .icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+#competences .competence-card h4 {
+  color: #D94B48;
+  margin-bottom: 10px;
+}
+#competences .competence-card p {
+  color: #6C7A89;
+  font-size: 15px;
+}
+
+#contact {
+  background-color: rgba(44, 166, 164, 0.85);
+  margin: 0 2vh;
+  padding-top: 1vh;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact h2 {
+  font-size: 36px;
+  color: #D94B48;
+  margin-bottom: 30px;
+}
+#contact .wpcf7-submit {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  background: #D94B48;
+  color: white;
+}
+#contact .wpcf7-submit:hover {
+  transform: scale(1.07);
+}
+
+#projet {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 2vh;
+  margin-top: 14vh;
+}
+#projet .projet-details {
+  padding: 2vh;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+}
+#projet .projet-details .projet-image img {
+  object-fit: contain;
+  max-width: 50vw;
+  max-height: 30vw;
+}
+#projet .projet-details .projet-header .projet-tech .competences {
+  display: flex;
+  flex-direction: row;
+  gap: 2vh;
+}
+#projet .projet-details .projet-header .projet-tech .competences .competence {
+  color: #F5F7FA;
+  background-color: #2CA6A4;
+  padding: 1vh;
+  border-radius: 5vh;
+}
+#projet .projet-details .projet-header .projet-lien-github {
+  margin-top: 4vh;
+}
+#projet .projet-details .projet-header .projet-lien-github a {
+  text-decoration: none;
+  background-color: #D94B48;
+  color: #F5F7FA;
+  padding: 2vh;
+  border-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#projet .projet-details .projet-header .projet-lien-github a img {
+  height: 3vh;
+  filter: brightness(0) invert(1);
+}
+#projet .projet-description {
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+#projet h2 {
+  padding-top: 2vh;
+  text-align: center;
+  font-size: 32px;
+  color: #D94B48;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 14vh;
+}
+
+body {
+  margin: 0px;
+  font-family: "nunito", monospace;
+}
+
+/*# sourceMappingURL=main.css.map */

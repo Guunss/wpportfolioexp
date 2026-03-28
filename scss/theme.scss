@@ -1,0 +1,17 @@
+@use 'partials/variables.scss';
+@use 'partials/header.scss';
+@use 'partials/fonts.scss';
+@use 'partials/accueil.scss';
+@use 'partials/projets.scss';
+@use 'partials/competences.scss';
+@use 'partials/contact.scss';
+@use 'partials/projet.scss';
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 14vh;
+}
+body {
+    margin: 0px;
+    font-family: 'nunito', monospace;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "wpportfolioexp",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/theme.scss:assets/css/main.css",
+    "sass-watch": "sass --watch scss/theme.scss:assets/css/main.css",
+    "sass-build": "sass scss/theme.scss:assets/css/main.css --style=compressed"
+  },
+  "dependencies": {
+    "sass": "^1.98.0",
+    "swiper": "^12.1.3"
+  }
+}

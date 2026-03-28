@@ -1,0 +1,119 @@
+@use './variables.scss';
+
+/* SECTION PROJETS */
+#projets {
+    background-color: rgba(variables.$color-turquoise-1, 0.2);
+    margin: 0 2vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    overflow: visible;
+    padding-bottom: 70px;
+    height: 86vh;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+/* TITRE */
+.projets-titre {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: variables.$color-rouge-1;
+}
+
+/* WRAPPER SWIPER */
+.swiper-container-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* SWIPER */
+.swiper {
+    width: 100%;
+}
+
+/* IMPORTANT SWIPER */
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+/* CARD PROJET */
+.projet {
+    width: 100%;
+    border: 1px solid variables.$color-rouge-1;
+    border-radius: 12px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    box-sizing: border-box;
+}
+
+/* LAYOUT IMAGE + TEXTE */
+.projets-image {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* IMAGE */
+.projets-image img {
+    width: 35%;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+
+    align-self: center; /* ✅ centre verticalement l’image */
+}
+
+/* TEXTE */
+.projets-content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projets-content h3 {
+    text-align: center;
+    font-size: 32px;
+    color: variables.$color-turquoise-fonce;
+    margin-bottom: 15px;
+}
+
+.projets-content p {
+    color: variables.$color-gris-1;
+    line-height: 1.6;
+}
+
+/* FLÈCHES SWIPER */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: variables.$color-rouge-1 !important;
+}
+
+/* Décalage visuel à l’extérieur */
+.swiper-button-prev {
+    left: 0;
+    transform: translate(-120%, -50%);
+}
+
+.swiper-button-next {
+    right: 0;
+    transform: translate(120%, -50%);
+}

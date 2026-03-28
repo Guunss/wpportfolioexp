@@ -1,0 +1,70 @@
+@use './variables.scss';
+
+#projet {
+    background-color: rgba($color: #FFFFFF, $alpha: 0.8);
+    margin: 0 2vh;
+    margin-top: 14vh;
+
+    .projet-details {
+        padding: 2vh;
+        display: flex;
+        flex-direction: row;
+        gap: 5vw;
+
+        .projet-image {
+
+            img {
+                object-fit: contain;
+                max-width: 50vw;
+                max-height: 30vw;
+            }
+        }
+
+        .projet-header {
+            .projet-tech {
+                .competences {
+                    display: flex;
+                    flex-direction: row;
+                    gap : 2vh;
+                    .competence {
+                        color: variables.$color-gris-clair;
+                        background-color: variables.$color-turquoise-1;
+                        padding: 1vh;
+                        border-radius: 5vh;
+                    }
+                }
+            }
+            .projet-lien-github {
+                margin-top: 4vh;
+                a {
+                    text-decoration: none;
+                    background-color: variables.$color-rouge-1;
+                    color: variables.$color-gris-clair;
+                    padding: 2vh;
+                    border-radius: 2vh;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    img {
+                        height: 3vh;
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .projet-description {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+
+
+    h2 {
+        padding-top: 2vh;
+        text-align: center;
+        font-size: 32px;
+        color: variables.$color-rouge-1;
+    }
+}

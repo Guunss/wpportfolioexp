@@ -1,0 +1,63 @@
+@use 'variables.scss';
+
+#competences {
+    background-color: rgba(variables.$color-gris-clair, 0.85);
+
+    margin: 0 2vh;
+    padding-top: 1vh;
+
+    text-align: center;
+    height: 86vh;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .competences-titre {
+        font-size: 36px;
+        color: variables.$color-rouge-1;
+        margin-bottom: 30px;
+    }
+
+    .competences-sous-titre {
+        font-size: 24px;
+        color: variables.$color-turquoise-1;
+        margin: 50px 0 40px;
+    }
+
+    .competences-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .competence-card {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 25px;
+        border-radius: 12px;
+        width: 260px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: variables.$color-rouge-1;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: variables.$color-gris-1;
+            font-size: 15px;
+        }
+    }
+}

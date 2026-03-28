@@ -1,0 +1,35 @@
+@use 'variables.scss';
+
+#contact {
+    background-color: rgba(variables.$color-turquoise-1, 0.85);
+
+    margin: 0 2vh;
+    padding-top: 1vh;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 36px;
+        color: variables.$color-rouge-1;
+        margin-bottom: 30px;
+    }
+
+    .wpcf7-submit {
+                padding: 12px 20px;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        font-weight: 500;
+        transition: transform 0.3s ease;
+        background: variables.$color-rouge-1;
+        color: white;
+
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+}
