@@ -552,8 +552,8 @@ header .social-media-icon img {
 }
 #projet {
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 0 2vh;
-  margin-top: 14vh;
+  width: 100%;
+  padding-bottom: 50px;
 }
 #projet .projet-details {
   padding: 2vh;
@@ -564,7 +564,7 @@ header .social-media-icon img {
 #projet .projet-details .projet-image img {
   object-fit: contain;
   max-width: 50vw;
-  max-height: 30vw;
+  max-height: 30vh;
 }
 #projet .projet-details .projet-header .projet-tech .competences {
   display: flex;
@@ -605,6 +605,19 @@ header .social-media-icon img {
   color: #D94B48;
 }
 
+@media screen and (max-width: 768px) {
+  #projet .projet-details {
+    flex-direction: column-reverse;
+  }
+  #projet .projet-details .projet-image {
+    margin: auto;
+  }
+  #projet .projet-details .projet-image img {
+    object-fit: contain;
+    max-width: 75vw;
+    max-height: 50vh;
+  }
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-block-start: 14vh;

@@ -2,8 +2,8 @@
 
 #projet {
     background-color: rgba($color: #FFFFFF, $alpha: 0.8);
-    margin: 0 2vh;
-    margin-top: 14vh;
+    width: 100%;
+    padding-bottom: 50px;
 
     .projet-details {
         padding: 2vh;
@@ -16,7 +16,7 @@
             img {
                 object-fit: contain;
                 max-width: 50vw;
-                max-height: 30vw;
+                max-height: 30vh;
             }
         }
 
@@ -25,7 +25,8 @@
                 .competences {
                     display: flex;
                     flex-direction: row;
-                    gap : 2vh;
+                    gap: 2vh;
+
                     .competence {
                         color: variables.$color-gris-clair;
                         background-color: variables.$color-turquoise-1;
@@ -34,8 +35,10 @@
                     }
                 }
             }
+
             .projet-lien-github {
                 margin-top: 4vh;
+
                 a {
                     text-decoration: none;
                     background-color: variables.$color-rouge-1;
@@ -66,5 +69,23 @@
         text-align: center;
         font-size: 32px;
         color: variables.$color-rouge-1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #projet {
+        .projet-details {
+            flex-direction: column-reverse;
+
+            .projet-image {
+                margin: auto;
+                img {
+                    object-fit: contain;
+                    max-width: 75vw;
+                    max-height: 50vh;
+                    
+                }
+            }
+        }
     }
 }
