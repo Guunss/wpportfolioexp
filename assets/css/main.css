@@ -14,16 +14,18 @@
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   height: 10vh;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: white;
-  margin: 2vh;
+  margin: 2vh 2vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 97vw;
+  width: auto;
   z-index: 999;
 }
 header .custom-logo {
@@ -66,6 +68,61 @@ header .social-media-icon img {
   padding-left: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  header #mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 27px;
+    height: 20px;
+    justify-content: space-between;
+    position: absolute;
+    top: 26px;
+    right: 20px;
+  }
+  header #mobile-menu.active .trait:first-child {
+    transform: translateY(10px) rotate(45deg);
+  }
+  header #mobile-menu.active .trait:nth-child(2) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  header #mobile-menu.active .trait:last-child {
+    display: none;
+  }
+  header #mobile-menu .trait {
+    border-top: solid 2px;
+    transition: 0.5s ease;
+  }
+  header nav {
+    position: absolute;
+    left: 0px;
+    top: 10vh;
+    height: 88vh;
+    width: 100%;
+    background-color: #2CA6A4;
+    z-index: 100;
+    transform: scaleY(0);
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav.active {
+    display: flex;
+    transform: scaleY(1);
+  }
+  header nav .menu-menu_principal-container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav .menu-menu_principal-container ul li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  header nav .menu-menu_principal-container ul li a {
+    color: white;
+    font-size: 44px;
+    text-transform: uppercase;
+  }
+}
 /* nunito-200 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -196,13 +253,12 @@ header .social-media-icon img {
 }
 #accueil {
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 0 2vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 40px;
-  height: 86vh;
-  margin-top: 14vh;
+  min-height: 86vh;
+  width: 100%;
 }
 #accueil .accueil-texte {
   max-width: 500px;
@@ -257,17 +313,25 @@ header .social-media-icon img {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  #accueil {
+    flex-direction: column-reverse;
+    height: unset;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
 /* SECTION PROJETS */
 #projets {
   background-color: rgba(44, 166, 164, 0.2);
-  margin: 0 2vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   overflow: visible;
   padding-bottom: 70px;
-  height: 86vh;
+  min-height: 86vh;
 }
 #projets a {
   text-decoration: none;
@@ -371,12 +435,36 @@ header .social-media-icon img {
   transform: translate(120%, -50%);
 }
 
+@media screen and (max-width: 768px) {
+  #projets {
+    height: unset;
+    padding: 15px 0px;
+  }
+  #projets .projets-content {
+    display: none;
+  }
+  #projets .projet {
+    width: 75%;
+    margin: auto;
+  }
+  #projets .projets-image {
+    justify-content: center;
+  }
+  #projets .projets-image img {
+    width: 80%;
+    max-width: unset;
+    object-fit: contain;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    transform: none;
+  }
+}
 #competences {
   background-color: rgba(245, 247, 250, 0.85);
-  margin: 0 2vh;
+  width: 100%;
   padding-top: 1vh;
   text-align: center;
-  height: 86vh;
+  min-height: 86vh;
 }
 #competences .container {
   max-width: 1200px;
@@ -422,11 +510,17 @@ header .social-media-icon img {
   font-size: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  #competences {
+    height: unset;
+    padding: 15px 0px;
+  }
+}
 #contact {
   background-color: rgba(44, 166, 164, 0.85);
-  margin: 0 2vh;
+  width: 100%;
   padding-top: 1vh;
-  height: 86vh;
+  min-height: 86vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -450,6 +544,12 @@ header .social-media-icon img {
   transform: scale(1.07);
 }
 
+@media screen and (max-width: 768px) {
+  #contact {
+    height: unset;
+    padding: 15px 0px;
+  }
+}
 #projet {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 0 2vh;
@@ -513,6 +613,10 @@ html {
 body {
   margin: 0px;
   font-family: "nunito", monospace;
+}
+
+main {
+  padding: 14vh 2vw 0 2vw;
 }
 
 /*# sourceMappingURL=main.css.map */

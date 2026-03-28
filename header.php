@@ -43,4 +43,10 @@
                     alt="icone linkedIn">
             </a>
         </div>
+
+        <div id="mobile-menu">
+            <span class="trait"></span>
+            <span class="trait"></span>
+            <span class="trait"></span>
+        </div>
     </header>

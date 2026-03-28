@@ -16,16 +16,18 @@
 header {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     height: 10vh;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: white;
-    margin: 2vh;
+    margin: 2vh 2vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 97vw;
+    width: auto;
     z-index: 999;
 
     .custom-logo {
@@ -80,4 +82,80 @@ header {
             padding-left: 10px;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+
+        #mobile-menu {
+            display: flex;
+            flex-direction: column;
+            width: 27px;
+            height: 20px;
+            justify-content: space-between;
+            position: absolute;
+            top: 26px;
+            right: 20px;
+
+            &.active {
+                .trait:first-child {
+                    transform: translateY(10px) rotate(45deg);
+                }
+
+                .trait:nth-child(2) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+
+                .trait:last-child {
+                    display: none;
+                }
+            }
+
+            .trait {
+                border-top: solid 2px;
+                transition: 0.5s ease;
+            }
+        }
+
+
+        nav {
+            position: absolute;
+            left: 0px;
+            top: 10vh;
+            height: 88vh;
+            width: 100%;
+            background-color: variables.$color-turquoise-1;
+            z-index: 100;
+            transform: scaleY(0);
+            transition: transform 0.5s ease-in-out;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                display: flex;
+                transform: scaleY(1);
+            }
+
+            .menu-menu_principal-container {
+
+                ul {
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+
+
+                        a {
+                            color: white;
+                            font-size: 44px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

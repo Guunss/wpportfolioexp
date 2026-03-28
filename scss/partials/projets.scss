@@ -3,7 +3,7 @@
 /* SECTION PROJETS */
 #projets {
     background-color: rgba(variables.$color-turquoise-1, 0.2);
-    margin: 0 2vh;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     position: relative;
     overflow: visible;
     padding-bottom: 70px;
-    height: 86vh;
+    min-height: 86vh;
     a {
         text-decoration: none;
         cursor: pointer;
@@ -116,4 +116,33 @@
 .swiper-button-next {
     right: 0;
     transform: translate(120%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    #projets {
+        height: unset;
+        padding: 15px 0px;
+
+        .projets-content {
+            display: none;
+        }
+
+        .projet {
+            width: 75%;
+            margin: auto;
+        }
+
+        .projets-image {
+            justify-content: center;
+            img {
+            width: 80%;
+            max-width: unset;
+            object-fit: contain;
+            }
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        transform: none;
+    }
 }

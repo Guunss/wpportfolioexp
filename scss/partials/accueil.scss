@@ -3,13 +3,12 @@
 #accueil {
 
     background-color: rgba($color: #FFFFFF, $alpha: 0.8);
-    margin: 0 2vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 40px;
-    height: 86vh;
-    margin-top: 14vh;
+    min-height: 86vh;
+    width: 100%;
 
     .accueil-texte {
         max-width: 500px;
@@ -72,6 +71,15 @@
     .accueil-image img {
         max-width: 400px;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #accueil {
+        flex-direction: column-reverse;
+        height: unset;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
