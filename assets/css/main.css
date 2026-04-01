@@ -517,10 +517,11 @@ header .social-media-icon img {
   }
 }
 #contact {
-  background-color: rgba(44, 166, 164, 0.85);
+  background-color: rgba(44, 166, 164, 0.7);
+  color: white;
   width: 100%;
-  padding-top: 1vh;
-  min-height: 86vh;
+  padding-top: 10px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -529,19 +530,65 @@ header .social-media-icon img {
   font-size: 36px;
   color: #D94B48;
   margin-bottom: 30px;
+  text-align: center;
+}
+#contact .wpcf7 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+#contact .wpcf7 p {
+  margin: 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+#contact .wpcf7 label {
+  margin: 0;
+  font-weight: 500;
+}
+#contact .wpcf7 input,
+#contact .wpcf7 textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+#contact .wpcf7 input:focus,
+#contact .wpcf7 textarea:focus {
+  outline: none;
+  border: 2px solid #D94B48;
+}
+#contact .wpcf7 input {
+  height: 40px;
+}
+#contact .wpcf7 textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+#contact .wpcf7 p.wpcf7-submit {
+  width: 100%;
 }
 #contact .wpcf7-submit {
-  padding: 12px 20px;
+  display: block;
+  width: 100%;
+  height: 40px;
   border-radius: 8px;
   border: none;
-  text-decoration: none;
   font-weight: 500;
+  font-size: 16px;
   transition: transform 0.3s ease;
   background: #D94B48;
   color: white;
+  cursor: pointer;
 }
 #contact .wpcf7-submit:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {

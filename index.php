@@ -77,7 +77,7 @@
 
             <div class="competences-grid">
                 <div class="competence-card">
-                    <div class="icon">W</div>
+                    <div class="icon">WP</div>
                     <h4>WordPress</h4>
                     <p>Thèmes, ACF, CPT, intégration</p>
                 </div>
