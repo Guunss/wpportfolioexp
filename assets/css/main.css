@@ -462,9 +462,10 @@ header .social-media-icon img {
 #competences {
   background-color: rgba(245, 247, 250, 0.85);
   width: 100%;
-  padding-top: 1vh;
+  padding-top: 20px;
+  padding-bottom: 60px;
   text-align: center;
-  min-height: 86vh;
+  min-height: 700px;
 }
 #competences .container {
   max-width: 1200px;
@@ -513,7 +514,7 @@ header .social-media-icon img {
 @media screen and (max-width: 768px) {
   #competences {
     height: unset;
-    padding: 15px 0px;
+    padding: 15px 0;
   }
 }
 #contact {

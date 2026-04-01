@@ -41,14 +41,14 @@
                             <div class="swiper-slide">
                                 <article class="projet">
                                     <a href="<?php echo get_permalink() ?>">
-                                    <div class="projets-image">
-                                        <?php the_post_thumbnail('medium'); ?>
+                                        <div class="projets-image">
+                                            <?php the_post_thumbnail('medium'); ?>
 
-                                        <div class="projets-content">
-                                            <h3><?php the_title(); ?></h3>
-                                            <?php the_field('description_courte'); ?>
+                                            <div class="projets-content">
+                                                <h3><?php the_title(); ?></h3>
+                                                <?php the_field('description_courte'); ?>
+                                            </div>
                                         </div>
-                                    </div>
                                     </a>
                                 </article>
                             </div>
@@ -101,19 +101,21 @@
                 <div class="competence-card">
                     <div class="icon">💡</div>
                     <h4>Autonomie</h4>
+                    <p>Créative et indépendante</p>
                 </div>
 
                 <div class="competence-card">
                     <div class="icon">📋</div>
                     <h4>Organisation</h4>
+                    <p>Structurée et efficace</p>
                 </div>
 
                 <div class="competence-card">
                     <div class="icon">💬</div>
                     <h4>Communication</h4>
+                    <p>Trilingue, claire et à l’écoute</p>
                 </div>
             </div>
-
         </div>
     </section>
 
