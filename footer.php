@@ -1,3 +1,4 @@
+<!-- code du footer -->
 <footer>
 </footer>
 

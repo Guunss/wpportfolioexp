@@ -1,3 +1,6 @@
+/*
+SASS du post Projet (single-projet.php)
+*/
 @use './variables.scss';
 
 #projet {
@@ -25,6 +28,7 @@
                 .competences {
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
                     gap: 2vh;
 
                     .competence {

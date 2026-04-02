@@ -1,6 +1,8 @@
+/*
+SASS de la section projets
+*/
 @use './variables.scss';
 
-/* SECTION PROJETS */
 #projets {
     background-color: rgba(variables.$color-turquoise-1, 0.2);
     width: 100%;
@@ -123,13 +125,22 @@
         height: unset;
         padding: 15px 0px;
 
+        .projets-image {
+            flex-direction: column-reverse;
+            gap: unset;
+            align-items: center;
+        }
+
         .projets-content {
-            display: none;
+            .projet-description {
+                display: none;
+            }
         }
 
         .projet {
             width: 75%;
             margin: auto;
+            padding: 10px;
         }
 
         .projets-image {

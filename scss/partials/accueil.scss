@@ -1,3 +1,7 @@
+/*
+SASS pour la section accueil
+*/
+
 @use './variables.scss';
 
 #accueil {
@@ -7,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 40px;
+    //one page : 100% viewport height - 14% du header
     min-height: 86vh;
     width: 100%;
 

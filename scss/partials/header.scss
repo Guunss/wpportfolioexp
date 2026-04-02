@@ -1,3 +1,6 @@
+/*
+SASS du header
+*/
 @use './variables.scss';
 
 .background {
@@ -33,9 +36,12 @@ header {
     .custom-logo {
         width: auto;
         height: 5vh;
+        margin-left: 12px;
     }
 
     nav {
+        margin-right: auto;
+
         .menu-menu_principal-container {
             ul {
                 display: flex;
@@ -77,16 +83,32 @@ header {
     }
 
     .social-media-icon {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        margin-right: 8px;
+
         img {
-            max-height: 40px;
-            padding-left: 10px;
+            height: 20px;
+            padding-left: 5px;
+            opacity: 0.7;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+            }
         }
+    }
+
+    #mobile-menu {
+        display: none;
     }
 }
 
 @media screen and (max-width: 768px) {
     header {
-
         #mobile-menu {
             display: flex;
             flex-direction: column;
@@ -101,11 +123,9 @@ header {
                 .trait:first-child {
                     transform: translateY(10px) rotate(45deg);
                 }
-
                 .trait:nth-child(2) {
                     transform: translateY(-8px) rotate(-45deg);
                 }
-
                 .trait:last-child {
                     display: none;
                 }
@@ -116,13 +136,14 @@ header {
                 transition: 0.5s ease;
             }
         }
-
-
+.social-media-icon {
+    margin-right: 70px;
+}
         nav {
             position: absolute;
-            left: 0px;
-            top: 10vh;
-            height: 88vh;
+            left: 0;
+            top: 80px;
+            height: calc(100vh - 80px);
             width: 100%;
             background-color: variables.$color-turquoise-1;
             z-index: 100;
@@ -137,25 +158,22 @@ header {
             }
 
             .menu-menu_principal-container {
-
                 ul {
                     flex-direction: column;
                     align-items: center;
+                    padding: 0;
 
                     li {
                         padding-top: 15px;
                         padding-bottom: 15px;
 
-
                         a {
                             color: white;
-                            font-size: 44px;
-                            text-transform: uppercase;
+                            font-size: 38px;
                         }
                     }
                 }
             }
         }
     }
-
 }

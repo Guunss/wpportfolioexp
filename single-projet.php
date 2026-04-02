@@ -17,6 +17,7 @@
     if ($custom_query->have_posts()):
         while ($custom_query->have_posts()):
             $custom_query->the_post();
+            //les compétences
             $competences = wp_get_post_terms(get_the_ID(), 'competence');
             $url_github = get_field('lien_vers_le_code');
             $description = get_field('description');

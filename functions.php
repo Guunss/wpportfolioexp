@@ -2,6 +2,8 @@
 
 //ajout support logo dans le thème
 add_theme_support('custom-logo');
+
+//enqueue des css et JS
 function enqueue_assets()
 {
 

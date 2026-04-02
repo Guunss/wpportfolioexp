@@ -1,3 +1,7 @@
+/*
+fichier principal pour le style SASS. importe les partials 
+et contient le code global (html, body, main ...)
+*/
 @use 'partials/variables.scss';
 @use 'partials/header.scss';
 @use 'partials/fonts.scss';
@@ -8,7 +12,9 @@
 @use 'partials/projet.scss';
 
 html {
+    //smooth => pour une appli one page
     scroll-behavior: smooth;
+    //on commence le scroll après le header qui est fixed
     scroll-padding-block-start: 14vh;
 }
 body {

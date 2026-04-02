@@ -31,6 +31,10 @@ header {
 header .custom-logo {
   width: auto;
   height: 5vh;
+  margin-left: 12px;
+}
+header nav {
+  margin-right: auto;
 }
 header nav .menu-menu_principal-container ul {
   display: flex;
@@ -63,9 +67,25 @@ header nav .menu-menu_principal-container ul li a:hover::after {
   width: 100%;
   transform: translateX(-50%) scaleX(1);
 }
+header .social-media-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 8px;
+}
 header .social-media-icon img {
-  max-height: 40px;
-  padding-left: 10px;
+  height: 20px;
+  padding-left: 5px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+header .social-media-icon img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+header #mobile-menu {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -92,11 +112,14 @@ header .social-media-icon img {
     border-top: solid 2px;
     transition: 0.5s ease;
   }
+  header .social-media-icon {
+    margin-right: 70px;
+  }
   header nav {
     position: absolute;
-    left: 0px;
-    top: 10vh;
-    height: 88vh;
+    left: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
     width: 100%;
     background-color: #2CA6A4;
     z-index: 100;
@@ -112,6 +135,7 @@ header .social-media-icon img {
   header nav .menu-menu_principal-container ul {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
   header nav .menu-menu_principal-container ul li {
     padding-top: 15px;
@@ -119,8 +143,7 @@ header .social-media-icon img {
   }
   header nav .menu-menu_principal-container ul li a {
     color: white;
-    font-size: 44px;
-    text-transform: uppercase;
+    font-size: 38px;
   }
 }
 /* nunito-200 - latin */
@@ -440,12 +463,18 @@ header .social-media-icon img {
     height: unset;
     padding: 15px 0px;
   }
-  #projets .projets-content {
+  #projets .projets-image {
+    flex-direction: column-reverse;
+    gap: unset;
+    align-items: center;
+  }
+  #projets .projets-content .projet-description {
     display: none;
   }
   #projets .projet {
     width: 75%;
     margin: auto;
+    padding: 10px;
   }
   #projets .projets-image {
     justify-content: center;
@@ -597,6 +626,9 @@ header .social-media-icon img {
     height: unset;
     padding: 15px 0px;
   }
+  #contact .wpcf7.js {
+    width: 90%;
+  }
 }
 #projet {
   background-color: rgba(255, 255, 255, 0.8);
@@ -617,6 +649,7 @@ header .social-media-icon img {
 #projet .projet-details .projet-header .projet-tech .competences {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2vh;
 }
 #projet .projet-details .projet-header .projet-tech .competences .competence {

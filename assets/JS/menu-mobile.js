@@ -1,8 +1,10 @@
+//etat du menu mobile
 let mobileMenuOpen = false;
 
-
+//à la fin du chargement de la page
 document.addEventListener("DOMContentLoaded", () => {
 
+/* gestion du menu mobile */
     const menu = document.getElementById('menu');
     const menuBurger = document.getElementById('mobile-menu');
 
